@@ -1,0 +1,8 @@
+What is NodeJs?
+
+It is a browser language that helps us to add interactivity.
+
+later javascript can only be executed in the browser because the browser has a Javascript Engine.
+Then Ryan Dahl embedded V8 Engine with C++ and made NodeJs
+
+So nodejs is the runtime environment for js
