@@ -1,0 +1,48 @@
+How Versioning Works in NodeJS?
+
+// version 
+
+4.18.2
+
+1st part => 4
+2nd part => 18
+3rd part => 2
+
+
+3rd part -> Minor fixes (and these are optional updates)
+
+2nd part -> Recommended Bug Fix (Security Fixer)
+
+1st part -> Major Release - Major/Breaking Update (it can break our existing code (because of new features, legacy code removal etc.))
+
+we can download particular version using 
+
+npm install express@4.17.0 (latest is 4.18.3) 
+
+
+.................................................................
+
+What is ^?
+
+express = ^4.18.3
+
+means the version can go more than 4
+
+2nd and 3rd can change but 1st can't
+
+express = 4.18.3 = Now npm update express won't work first I have to uninstall it and then install it 
+
+
+
+express = ~4.18.3
+
+this means 4.18 will not change only minor changes will change
+
+
+
+
+
+
+
+
+
