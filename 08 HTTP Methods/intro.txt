@@ -1,0 +1,7 @@
+There are 5 HTTP methods
+
+1) GET -> When we want to get/receive some data from the server
+2) POST -> When we want to send some data to the server 
+3) PUT -> When we want to put some data on the server like images, files and videos
+4) PATCH -> When we want to update some data to the server
+5) DELETE -> When we want to delete some data from the server 
