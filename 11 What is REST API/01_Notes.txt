@@ -1,0 +1,12 @@
+What is REST API?
+
+It is a type of API that has standards(Rules)
+
+So there are some best practices that we should follow then we can say our server is created by restful API
+
+
+
+Rules -
+
+1) Works on Server Client Architecture
+2) Respect all HTTP methods
