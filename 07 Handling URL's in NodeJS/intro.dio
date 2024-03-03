@@ -1,0 +1,43 @@
+<mxfile host="65bd71144e">
+    <diagram id="XmTpAPGu6VMWocZFwOGM" name="Page-1">
+        <mxGraphModel dx="515" dy="588" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="https://www.Himanshu.com/about" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;strokeWidth=100;fontSize=32;" vertex="1" parent="1">
+                    <mxGeometry x="113" y="130" width="500" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="line;strokeWidth=5;html=1;strokeColor=#FFFF33;" vertex="1" parent="1">
+                    <mxGeometry x="128" y="180" width="92" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Protocol:" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="125" y="195" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Hypertext&lt;br&gt;Transfer&lt;br&gt;Protocol&lt;br&gt;Secure&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="125" y="220" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Protocol is a set of rule which tell the browser that how to communicate with server" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="373" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="line;strokeWidth=5;html=1;strokeColor=#33FFFF;" vertex="1" parent="1">
+                    <mxGeometry x="222" y="180" width="288" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Domain" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="190" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Domain is a user-friendly name of our server's IP address&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="195" y="416" width="330" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="We can check the IP address of any domain using the command &quot; Ping google.com &quot;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="495" width="470" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="line;strokeWidth=5;html=1;strokeColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="512" y="180" width="88" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Root path" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
+                    <mxGeometry x="512" y="190" width="80" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
