@@ -1,8 +1,12 @@
 const express = require('express');
-const users = require("./MOCK_DATA.json")
+const fs = require('fs');
+const users = require("./MOCK_DATA.json");
+
 const app = express();
 const PORT = 8000;
 
+
+app.use(express.urlencoded({ extended: false })) // middleware (this will handle put the form data in the body)
 
 app.get("/", (req, res) => {
     return res.send("Go to /users")
@@ -40,8 +44,22 @@ app.get("/api/users/:id", (req, res) => {
 
 app.post('/api/users', (req, res) => {
     // TODO: create new user 
+    const body = req.body // all data sent from frontend
+    //- console.log(body); // right now undefined because express don't know that what type of data is that and how to handle it 
+    // so for that we have to use middleware (for think it as a plugin)
 
-    return res.json({ status: "Pending" })
+    //- after adding middleware
+    // console.log(body);
+    //{ first_name: 'Jay', last_name: 'Tyagi', email: 'Jay@tyagi.com', gender: 'Male', job_title: 'SDE-20'  } 
+    // we are getting our form data entered in postman 
+
+
+    //- adding the new user in users 
+    // here we don't have database so we are working with fs
+    users.push({ ...body, id: users.length + 1 })
+    fs.writeFile('./MOCK_DATA.json', JSON.stringify(users), (err, result) => {
+        return res.json({ status: "Success", id: users.length })
+    })
 })
 
 // Patch requests
@@ -49,7 +67,17 @@ app.post('/api/users', (req, res) => {
 app.patch('/api/users/:id', (req, res) => {
     // TODO: edit the user with id 
 
-    return res.json({ status: "Pending" })
+    const id = Number(req.params.id);
+    const body = req.body;
+    const user = users.find((user) => user.id === id)
+    const updatedUser = { ...user, ...body };
+    updatedUser.id = id;
+    users[id - 1] = updatedUser
+
+    fs.writeFile('MOCK_DATA.json', JSON.stringify(users), (err, data) => {
+        return res.json({ status: "Success", updatedUser })
+    })
+
 })
 
 // Delete requests
