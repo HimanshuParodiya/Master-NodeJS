@@ -1,0 +1,14 @@
+Middleware is just a function that runs on every request and response cycle
+
+it is a middleman between the client and the server
+
+
+client -------------> Middleware -------------> server() 
+
+there can be multiple middleware
+client -------------> Middleware 1 -------------> Middleware 2 -------------> Middleware 3 -------------> server() 
+
+1) Execute any code.
+2) Make changes to the req and res object
+3) It can stop the request or send it further.
+4) Call the next middleware function in the stack
