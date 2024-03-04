@@ -8,6 +8,20 @@ const PORT = 8000;
 
 app.use(express.urlencoded({ extended: false })) // middleware (this will handle put the form data in the body)
 
+//creating custom middleware 
+app.use((req, res, next) => { // next is the reference to next middleware in the stack
+    // when there is 1 middleware so next is pointing to our routes when 
+
+    console.log("Hello from middleware 1");
+
+    // return res.json({ msg: "Hello from middleware 1" }) // now in postmen instead of users we are getting this object because we are returning it req didn't even reach to our routes
+
+    // so what we can do is call the next
+    next()
+
+})
+
+
 app.get("/", (req, res) => {
     return res.send("Go to /users")
 })
