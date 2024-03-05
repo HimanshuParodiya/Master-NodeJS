@@ -1,0 +1,6 @@
+1) What are HTTP Headers in API?
+And) They provide additional information about the request or response being sent between a client and a server.
+
+
+there are several headers with request and response.
+we can also create our own headers
