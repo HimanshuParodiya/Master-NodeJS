@@ -1,0 +1,60 @@
+Q) What is MongoDB?
+1) MongoDB is a database.
+
+
+Let's talk in detail
+
+1) No-SQL Document Based Database
+
+    There are 2 types of databases SQL(Structured Query Language) and No-SQL
+    SQL -> Works on relations and tables. 
+    example: MySQL and Postgres
+
+    No-SQL -> Works on documents
+    example MongoDB and Redis
+
+2) Strong support for aggregation pipes
+
+3) Works on BSON format
+    it stores the data in BSON format
+
+4) Best for Node Applications
+    
+
+
+
+
+---------------------------------------------------------------------
+
+Architecture of MongoDB
+
+collection -> "users"
+
+Document -> Inside collection and there can be multiple documents
+
+
+users = {   <--- collection
+    [
+        {    <--- document
+            user : "Jay",  
+            age : 20      
+        }
+    ]
+}
+
+
+----------------------------------------------------------------------
+
+5) Installation of MongoDB
+
+// simply download from official site
+
+----------------------------------------------------------------------
+
+6) Some Commands of MongoDB
+
+> show dbs                -> return all the databases we have
+> use <db_name>           -> Now you are inside this database 
+> show collections        -> Show all the collections of the current database
+> db.collection.find()    -> db.collection_name.find({}) will find all in particular collection 
+> db.collection.insert()  -> db.collection.insert({key : value}) add in our collection
