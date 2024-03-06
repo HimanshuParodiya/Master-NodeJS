@@ -49,6 +49,9 @@ app.get("/api/users/:id", (req, res) => {
     const userWithId = users.find((user) => (
         user.id == id
     ))
+    if (!userWithId) {
+        return res.status(404).json({ msg: "User not found" })
+    }
     return res.json(userWithId)
 })
 
@@ -60,17 +63,9 @@ app.get("/api/users/:id", (req, res) => {
 app.post('/api/users', (req, res) => {
     // TODO: create new user 
     const body = req.body // all data sent from frontend
-    //- console.log(body); // right now undefined because express don't know that what type of data is that and how to handle it 
-    // so for that we have to use middleware (for think it as a plugin)
-
-    //- after adding middleware
-    // console.log(body);
-    //{ first_name: 'Jay', last_name: 'Tyagi', email: 'Jay@tyagi.com', gender: 'Male', job_title: 'SDE-20'  } 
-    // we are getting our form data entered in postman 
-
-
-    //- adding the new user in users 
-    // here we don't have database so we are working with fs
+    if (!body || !body.last_name || !body.first_name || !body.email || !body.gender || !body.job_title) {
+        return res.status(400).json({ mag: "All fields are required" }) // return this message with status code 400
+    }
     users.push({ ...body, id: users.length + 1 })
     fs.writeFile('./MOCK_DATA.json', JSON.stringify(users), (err, result) => {
         return res.json({ status: "Success", id: users.length })
