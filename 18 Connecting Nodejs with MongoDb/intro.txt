@@ -1,0 +1,15 @@
+Mongoose 
+
+Schema -> Define the structure
+        2) With the help of this schema, we create the model 
+        3) Using the model we do CRUD operations
+
+
+
+Schema is like -> 
+    we will have 
+        first_name
+        last_name
+        age
+        email
+        gender
