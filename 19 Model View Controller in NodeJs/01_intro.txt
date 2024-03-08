@@ -1,0 +1,14 @@
+                                    Model
+                                 2/       \1
+                                 /         \
+                              view      controller
+
+flow is
+controller -> model -> view
+
+
+The Controller Controls/manipulates the model 
+And model updates the view
+
+
+Our previous folder (18) thinks was working fine but our file is polluted and it is not following any structure. 
