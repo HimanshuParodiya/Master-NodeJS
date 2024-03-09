@@ -15,6 +15,20 @@ async function handelGenerateNewShortURL(req, res) {
     return res.json({ id: shortID })
 }
 
+
+// controlling visits on site
+async function handelGetAnalytics(req, res) {
+    const shortId = req.params.shortID
+
+    const result = await URL.findOne({ shortId })
+    console.log(result);
+
+    return res.json({ totalClicks: result.visitHistory.length, analytics: result.visitHistory })
+
+}
+
+
 module.exports = {
-    handelGenerateNewShortURL
+    handelGenerateNewShortURL,
+    handelGetAnalytics
 }

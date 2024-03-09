@@ -15,6 +15,8 @@ connectToMongoDB("mongodb://127.0.0.1:27017/url-shortener")
 // middleware 
 app.use(express.json())
 
+
+// redirecting user to original url
 app.get("/:shortID", async (req, res) => {
     const shortID = req.params.shortID
     const entry = await URL.findOneAndUpdate({
