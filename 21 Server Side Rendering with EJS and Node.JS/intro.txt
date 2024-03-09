@@ -1,1 +1,10 @@
 Here we gonna build a UI for our shortening URL project
+
+So, what is SSR?
+Here webpage is rendered on the server and sent fully rendered page to the client
+    
+
+example
+app.get("/test", (req, res) => {
+    return res.end("<h1>Hey There! </h1>")
+})
