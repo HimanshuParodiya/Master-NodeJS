@@ -5,16 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Hey There</h1>
-
-    <% urls.forEach(url=> { %>
-        <li>
-            <%= url.shortID %>
-        </li>
-        <% }) %>
+    <h1>URL Shortener</h1>
+    <div>
+        <form method="POST" action="/url">
+            <label>Enter your original URL</label>
+            <!-- name is matching with path -->
+            <input type="text" name="url" placeholder="https://example.com">
+            <button>Generate</button>
+        </form>
+    </div>
 </body>
 
 </html>

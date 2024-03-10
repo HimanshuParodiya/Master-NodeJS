@@ -1,5 +1,6 @@
 const express = require('express');
 const urlRoute = require('./routes/url');
+const staticRoute = require('./routes/staticRouter');
 const { connectToMongoDB } = require('./connect');
 const URL = require('./models/url');
 const path = require('path');
@@ -15,6 +16,7 @@ connectToMongoDB("mongodb://127.0.0.1:27017/url-shortener")
 
 // middleware 
 app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 
 
 // below method is very hectic
@@ -68,6 +70,11 @@ app.get("/url/:shortID", async (req, res) => {
 })
 
 app.use("/url", urlRoute)
+
+
+// rendering static page
+app.use('/', staticRoute)
+
 app.listen(PORT, () => {
     console.log(`Server started at port : http://localhost:${PORT}`);
 })
