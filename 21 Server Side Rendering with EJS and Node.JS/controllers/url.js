@@ -11,8 +11,8 @@ async function handelGenerateNewShortURL(req, res) {
         redirectedURL: body.url,
         visitHistory: [],
     });
-
-    return res.json({ id: shortID })
+    return res.render("home", { id: shortID }) // rendering home page with shortID
+    // return res.json({ id: shortID })
 }
 
 

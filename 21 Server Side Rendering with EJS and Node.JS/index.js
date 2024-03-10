@@ -44,13 +44,13 @@ app.use(express.urlencoded({ extended: false }))
 app.set("view engine", "ejs")
 app.set("views", path.resolve('./views'))
 
-app.get("/test", async (req, res) => {
-    const allURLs = await URL.find({});
+// app.get("/test", async (req, res) => {
+//     const allURLs = await URL.find({});
 
-    return res.render("home", {
-        urls: allURLs // now we can access urls in home.ejs
-    })
-})
+//     return res.render("home", {
+//         urls: allURLs // now we can access urls in home.ejs
+//     })
+// })
 
 
 // redirecting user to original url
