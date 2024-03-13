@@ -1,0 +1,40 @@
+Patterns of Authentication
+
+1) Stateful:- Which maintains state or data on server-side                                         
+
+2) Stateless:- Which has no state
+
+
+
+///////////////////////////////////////////////////////////////
+
+- First, let's understand stateful 
+
+
+            username/password
+        ----------------------------> 
+Client                                Server
+        <----------------------------
+            session uid(unique id)
+
+it gives us the ID after seeing my username/password and, Map my username/password with session uid
+
+-------------------------------------
+)------- How to transfer UID?
+
+                  cookies
+        <----------------------------> 
+Client            response             Server
+        <---------------------------->
+                  header
+        <---------------------------->
+
+
+-------------------------------------
+)------- Express Flow?
+
+Client ----------------> Auth Middleware ----------------> Endpoint route
+                Check for cookie/header/response
+                value or uid, if valid call next() 
+                else rejects the request
+
