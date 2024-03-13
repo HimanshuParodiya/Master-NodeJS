@@ -11,6 +11,7 @@ async function handleUserSignup(req, res) {
         password
     })
 
+    // if new user is successfully created then in response render home page
     return res.render("home")
 }
 
