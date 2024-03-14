@@ -10,6 +10,7 @@ async function handelGenerateNewShortURL(req, res) {
         shortID: shortID,
         redirectedURL: body.url,
         visitHistory: [],
+        createdBy: req.user._id // req.user we set on restrictToLoggedInUSerOnly
     });
     return res.render("home", { id: shortID }) // rendering home page with shortID
     // return res.json({ id: shortID })

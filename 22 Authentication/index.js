@@ -10,7 +10,7 @@ const path = require('path');
 const urlRoute = require('./routes/url');
 const staticRoute = require('./routes/staticRouter');
 const userRoute = require('./routes/user');
-const { restrictToLoggedInUSerOnly } = require('./middlewares/auth');
+const { restrictToLoggedInUSerOnly, checkAuth } = require('./middlewares/auth');
 
 
 const app = express();
@@ -49,7 +49,7 @@ app.get("/url/:shortID", async (req, res) => {
 // app.use("/url", urlRoute)
 app.use("/url", restrictToLoggedInUSerOnly, urlRoute) // if we are login then only we can go /url. This middleware will run when there will be a request to /url
 // rendering static page
-app.use('/', staticRoute)
+app.use('/', checkAuth, staticRoute)
 
 // any path stating with /user gonna use userRoute
 app.use('/user', userRoute)
