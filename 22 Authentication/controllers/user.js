@@ -1,4 +1,6 @@
-const User = require("../models/user")
+const { v4: uuidV4 } = require("uuid")
+const User = require("../models/user");
+const { setUser } = require("../services/auth");
 
 async function handleUserSignup(req, res) {
     // extracting data from req
@@ -28,6 +30,11 @@ async function handleUserLogin(req, res) {
             error: "Invalid Username or Password"
         })
     }
+
+    // generating session id
+    const sessionID = uuidV4();
+    setUser(sessionID, user);
+    res.cookie("uid", sessionID)
     // if user is successfully found then in response render home page
     return res.redirect("/")
 }
@@ -37,3 +44,4 @@ async function handleUserLogin(req, res) {
 module.exports = {
     handleUserSignup, handleUserLogin
 }
+// now we have cookie with session uid
