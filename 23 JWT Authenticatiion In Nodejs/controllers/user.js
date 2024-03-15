@@ -31,10 +31,10 @@ async function handleUserLogin(req, res) {
         })
     }
 
-    // generating session id
-    const sessionID = uuidV4();
-    setUser(sessionID, user);
-    res.cookie("uid", sessionID)
+    // now with jwt no need of sessionID
+    // const sessionID = uuidV4();
+    const token = setUser(user);
+    res.cookie("uid", token)
     // if user is successfully found then in response render home page
     return res.redirect("/")
 }
