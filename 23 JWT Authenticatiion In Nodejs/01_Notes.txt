@@ -1,0 +1,27 @@
+Previously we have seen the stateful Authentication.
+
+The problem with stateful auth is when we restart the server or we lose the state.
+1) All users will logout 
+2) Memory extensive method (use the memory of our server but we have limited memory on the server) 
+
+now stateless server comes into play.
+here we pass the state inside the header/token instead of putting it in the backend
+
+
+example: 
+
+we will add the car number to the parking ticket instead of mapping it with the register.
+now anyone can make their ticket so for that we will put a stamp on it so we can recognize it.
+
+3) JWT
+now when we create a token/ID for the user we will put the data in it and we will lock it so that people can only read it but can edit it.
+for this we use JWT.
+
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9. <------- header
+eyJuYW1lIjoiSmF5IiwiaWQiOjF9. <------- Payload
+iXG8P-6O4d0bKrBtOvLbsU5ntoCMI-9LhwRVkRx291Q <------- signature
+
+
+we will put this token in user cookie
