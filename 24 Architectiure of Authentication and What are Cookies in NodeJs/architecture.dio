@@ -1,0 +1,61 @@
+<mxfile host="65bd71144e">
+    <diagram id="FofsPPGFVujevoYQM1kU" name="Page-1">
+        <mxGraphModel dx="94" dy="239" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="10" style="edgeStyle=none;html=1;entryX=0.161;entryY=1.004;entryDx=0;entryDy=0;fontSize=6;entryPerimeter=0;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="90" y="280"/>
+                            <mxPoint x="160" y="280"/>
+                            <mxPoint x="220" y="280"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image;image=img/lib/active_directory/generic_server.svg;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="230" width="28" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" style="edgeStyle=none;html=1;" edge="1" parent="1" source="4">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="100" y="240" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="220" y="240"/>
+                            <mxPoint x="220" y="220"/>
+                            <mxPoint x="170" y="220"/>
+                            <mxPoint x="120" y="220"/>
+                            <mxPoint x="120" y="240"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image;image=img/lib/active_directory/laptop_client.svg;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="230" width="45" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="username/password" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="200" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Generate JWT token send to browser as cookie" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="280" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="1) Now we can send this JWT token to user by cookie and res" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="25" y="340" width="190" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Cookie" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="370" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="1)&amp;nbsp; Browser will store the cookie of uid by default." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="22" y="391" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="2)&amp;nbsp; Now if we do anytype of req on any route&amp;nbsp; browser will send cookie automatically with req" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="410" width="270" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="3)&amp;nbsp; So every time we can check that do the have the cookie with req named uid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="22" y="430" width="230" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="3)&amp;nbsp; So every time we can check that do the have the cookie with req named uid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=6;" vertex="1" parent="1">
+                    <mxGeometry x="22" y="447" width="230" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,24 @@
+1) Cookies are Domain-specific -> Each site will only handle their cookies. facebook will not use Google cookie and Visa-verse
+2) We pass the expiry date
+
+
+But this is browser-specific we can't use it on mobile application
+
+
+-------------------------------------------------------------------
+
+Now let's see the response method
+1) The server will create a token.
+2) We will send res.json(token)
+3) Now we can store this string in our device by file or anything 
+
+but how will we send this string(res.json(token)) 
+because cookies are used to send automatically. 
+
+we will make a header and add it there
+
+header {
+    token: ______
+}
+
+now in every req, we will check the header instead cookies
