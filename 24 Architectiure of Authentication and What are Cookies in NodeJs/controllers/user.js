@@ -34,9 +34,12 @@ async function handleUserLogin(req, res) {
     // now with jwt no need of sessionID
     // const sessionID = uuidV4();
     const token = setUser(user);
-    res.cookie("uid", token)
+    // res.cookie("uid", token)
     // if user is successfully found then in response render home page
-    return res.redirect("/")
+    // return res.redirect("/")
+
+    // now we will not use cookies
+    return res.json({ token })
 }
 
 
